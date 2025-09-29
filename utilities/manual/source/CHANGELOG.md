@@ -6,6 +6,8 @@
 - fix stylesheet application on windowed pdf viewer, see [#4185](https://github.com/texstudio-org/texstudio/discussions/4185)
 - fix showing log for labels with colon in its name, see [#4184](https://github.com/texstudio-org/texstudio/issues/4184)
 - fix quotation mark replacement in rnw files,see [#4180](https://github.com/texstudio-org/texstudio/issues/4180)
+- handle units in siunitx special to reduce completion offer and syntax check
+- add indent guides (optional), see [#4129](https://github.com/texstudio-org/texstudio/issues/4129)
 
 ## TeXstudio 4.8.9
 

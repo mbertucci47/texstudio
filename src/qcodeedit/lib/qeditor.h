@@ -95,7 +95,6 @@ class QCE_EXPORT QEditor : public QAbstractScrollArea
 
 			SmoothScrolling     = 0x00004000,
 			MouseWheelZoom      = 0x00008000,
-			VerticalOverScroll  = 0x04000000,
 
 			ReplaceIndentTabs		= 0x00010000,
 			ReplaceTextTabs			= 0x00020000,
@@ -108,6 +107,8 @@ class QCE_EXPORT QEditor : public QAbstractScrollArea
 			WeakIndent			= 0x00800000,
 			AutoInsertLRM		= 0x01000000,
 			BidiVisualColumnMode= 0x02000000,
+            ShowIndentGuides    = 0x04000000,
+            VerticalOverScroll  = 0x08000000,
 
 			ShowPlaceholders	= 0x10000000,
 			OverwriteOpeningBracketFollowedByPlaceholder = 0x20000000,

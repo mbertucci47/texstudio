@@ -4947,8 +4947,9 @@ void Texstudio::normalCompletion()
 	if (tk.subtype != Token::none && type!=Token::command && type!=Token::commandUnknown){
 		type = tk.subtype;
 	}
-    if (type >= Token::specialArg) {
+    if (type >= Token::specialArg || tk.subtype >= Token::specialArg) {
 		int df = int(type - Token::specialArg);
+        if(df<0) df=int(tk.subtype - Token::specialArg);
 		QString cmd = latexParser.mapSpecialArgs.value(df);
 		if (mCompleterNeedsUpdate) updateCompleter();
 		completer->setWorkPath(cmd);
@@ -7301,7 +7302,7 @@ void Texstudio::generalOptions()
     connect(&configManager, &ConfigManager::iconSizeChanged, this, &Texstudio::changeIconSize);
     connect(&configManager, &ConfigManager::secondaryIconSizeChanged, this, &Texstudio::changeSecondaryIconSize);
     connect(&configManager, &ConfigManager::pdfIconSizeChanged , this, &Texstudio::changePDFIconSize);
-    connect(&configManager, &ConfigManager::symbolGridIconSizeChanged, this, [=](int size) { changeSymbolGridIconSize(size); });
+    connect(&configManager, &ConfigManager::symbolGridIconSizeChanged, this, [=,this](int size) { changeSymbolGridIconSize(size); });
 
     // The focus will return to the parent. Therefore we have to provide the correct caller (may be a viewer window).
     QWidget *parentWindow = UtilsUi::windowForObject(sender(), this);

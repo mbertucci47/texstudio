@@ -245,6 +245,7 @@ There are a few argument names that have special meaning:
 -   `formula` or ends with `%formula`: The argument is always treated as
     if in math-mode. See chemformula.cwl for an example.
 -   ends with `%special`: special argument which relates to data defined via special definition, see classifier 's'. The database is the text before `%`.
+-   ends with `%specialMultiArg`: like `%special`, but the argument may contain more than one element, each of which is checked individually for syntax 
 -   ends with `%specialDef`: special argument which defines data for a database, see classifier 's'.
 
 A %-suffix takes precedence over detection by name, i.e. an argument
@@ -666,3 +667,9 @@ python3-sphinx-inline-tabs
 python3-sphinx-designer
 python3-sphinxex-opengraph
 ``` 
+
+Alternatively sphinx can be directly installed as python packages (make sure that they are accessible via commandline):
+
+````
+pip install sphinx furo myst-parser sphinx-inline-tabs sphinx_designer sphinxext_opengraph
+```

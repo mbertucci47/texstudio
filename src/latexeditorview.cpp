@@ -296,6 +296,13 @@ bool DefaultInputBinding::keyPressEvent(QKeyEvent *event, QEditor *editor)
             }
 
             LatexCompleter::CompletionFlags flags= ctx==EnumsTokenType::width ? LatexCompleter::CF_FORCE_LENGTH : LatexCompleter::CompletionFlag(0) ;
+            if(ctx>=Token::specialArg){
+                // handle specialArg completion
+                int df = int(ctx - Token::specialArg);
+                QString cmd = LatexEditorView::completer->getLatexParser().mapSpecialArgs.value(df);
+                LatexEditorView::completer->setWorkPath(cmd);
+                flags= LatexCompleter::CF_FORCE_SPECIALOPTION;
+            }
             LatexEditorView::completer->complete(editor, flags);
 		}
 		return true;
@@ -1859,6 +1866,7 @@ void LatexEditorView::updateSettings()
 	editor->setFlag(QEditor::VerticalOverScroll, config->verticalOverScroll);
 	editor->setFlag(QEditor::AutoInsertLRM, config->autoInsertLRM);
 	editor->setFlag(QEditor::BidiVisualColumnMode, config->visualColumnMode);
+    editor->setFlag(QEditor::ShowIndentGuides, config->showIndentGuides);
 	editor->setFlag(QEditor::OverwriteOpeningBracketFollowedByPlaceholder, config->overwriteOpeningBracketFollowedByPlaceholder);
 	editor->setFlag(QEditor::OverwriteClosingBracketFollowingPlaceholder, config->overwriteClosingBracketFollowingPlaceholder);
 	//TODO: parenmatch
@@ -1885,7 +1893,11 @@ void LatexEditorView::updateSettings()
 	editor->setDisplayModifyTime(false);
 	searchReplacePanel->setUseLineForSearch(config->useLineForSearch);
 	searchReplacePanel->setSearchOnlyInSelection(config->searchOnlyInSelection);
-	QDocument::setShowSpaces(config->showWhitespace ? (QDocument::ShowTrailing | QDocument::ShowLeading | QDocument::ShowTabs) : QDocument::ShowNone);
+    QDocument::WhiteSpaceMode wsMode=config->showWhitespace ? (QDocument::ShowTrailing | QDocument::ShowLeading | QDocument::ShowTabs) : QDocument::ShowNone;
+    if(config->showIndentGuides){
+        wsMode = wsMode | QDocument::ShowIndentGuides;
+    }
+    QDocument::setShowSpaces(wsMode);
 	QDocument::setTabStop(config->tabStop);
 	QDocument::setLineSpacingFactor(config->lineSpacingPercent / 100.0);
 
