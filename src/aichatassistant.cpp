@@ -149,7 +149,8 @@ void AIChatAssistant::slotSend()
     if(m_reply){
         // if reply is active, stop it
         m_reply->abort();
-        m_reply->deleteLater();
+        if(m_reply)
+            m_reply->deleteLater();
         m_reply=nullptr;
         m_actSend->setToolTip(tr("Send Query to AI provider"));
         m_actSend->setIcon(getRealIcon("document-send"));
@@ -488,7 +489,11 @@ void AIChatAssistant::onTreeViewClicked(const QModelIndex &index)
         if(m_response.contains("```javascript")||m_response.contains("```bash")){ // mistral ai sometimes declares txs macros as bash
             m_actInsert->setToolTip(tr("Execute as macro"));
         }else{
-            m_actInsert->setToolTip(tr("Insert into text"));
+            if(m_response.contains("```latex")){
+                m_actInsert->setToolTip(tr("Insert code into text"));
+            }else{
+                m_actInsert->setToolTip(tr("Insert into text"));
+            }
         }
     }else{
         // no query sent yet
@@ -548,13 +553,13 @@ QString AIChatAssistant::getConversationForBrowser()
         QJsonObject obj=it->toObject();
         QString role=obj["role"].toString();
 #if QT_VERSION>=QT_VERSION_CHECK(5,14,0)
-        const QString content=QString("%%%txs%%%")+(obj["content"].toString())+QString("%%%txs%%%");
+        const QString content=QString("%%%txs%%%\n")+(obj["content"].toString())+QString("%%%txs%%%");
         QTextDocument td;
         td.setMarkdown(content);
         const QString contentHTML=td.toHtml();
         // strip html from surrounding default tags
         const auto parts=contentHTML.split("%%%txs%%%");
-        const QString cnt=parts.value(1);
+        QString cnt=parts.value(1);
 #else
         const QString cnt=obj["content"].toString();
 #endif
@@ -567,11 +572,15 @@ QString AIChatAssistant::getConversationForBrowser()
             result.append(cnt);
             result.append("\n</p>\n");
         }else if(role=="assistant"){
+            QString styleMacro=""; // style for macros
             if(darkMode){
-                result.append("<p style=\"background-color: cornflowerblue;margin-left: 20px\">\n");
+                styleMacro="background-color: cornflowerblue;margin-left: 20px";
             }else{
-                result.append("<p style=\"background-color: aliceblue;margin-left: 20px\">\n");
+                styleMacro="background-color: aliceblue;margin-left: 20px";
             }
+            result.append(QString("<p style=\"%1\">\n").arg(styleMacro));
+            static QRegularExpression re_marginLeft("margin-left:\\s*\\d+\\D*;");
+            cnt.replace(re_marginLeft,styleMacro+";");
             result.append(cnt);
             result.append("\n</p>\n");
         }
