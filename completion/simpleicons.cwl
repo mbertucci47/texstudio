@@ -1,5 +1,5 @@
 # simpleicons package
-# Matthew Bertucci 2026/02/07 for v16.7.0
+# Matthew Bertucci 2026/02/14 for v16.8.0
 
 #include:iftex
 
@@ -727,6 +727,7 @@ deepin
 deepl
 deepmind
 deepnote
+deezer
 deliveroo
 dell
 delonghi
@@ -734,6 +735,7 @@ delphi
 delta
 deluge
 deno
+denodeploy
 denon
 dependabot
 dependencycheck
@@ -1934,6 +1936,7 @@ naver
 nba
 nbb
 nbc
+ndi
 ndr
 near
 nebula
@@ -2151,6 +2154,7 @@ paloaltonetworks
 paloaltosoftware
 panasonic
 pandas
+pandoc
 pandora
 pantheon
 paperlessngx

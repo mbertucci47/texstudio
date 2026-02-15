@@ -1,5 +1,5 @@
 # cwpuzzle package
-# Matthew Bertucci 2026/02/11 for v1.14
+# Matthew Bertucci 2026/02/14 for v1.15
 
 #include:amssymb
 
@@ -14,6 +14,7 @@ huge
 Huge
 german
 ngerman
+french
 #endkeyvals
 
 \begin{Puzzle}{columns}{rows}
