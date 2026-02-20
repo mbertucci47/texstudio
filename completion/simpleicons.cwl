@@ -1,5 +1,5 @@
 # simpleicons package
-# Matthew Bertucci 2026/02/14 for v16.8.0
+# Matthew Bertucci 2026/02/20 for v16.9.0
 
 #include:iftex
 
@@ -1402,6 +1402,7 @@ improvmx
 indeed
 indiansuperleague
 indiehackers
+indieweb
 indigo
 inductiveautomation
 inertia
@@ -2114,6 +2115,7 @@ opslevel
 optimism
 optuna
 orange
+orchardcore
 orcid
 oreilly
 org
@@ -2854,6 +2856,7 @@ sumologic
 suno
 sunrise
 supabase
+supercell
 supercrease
 supermicro
 superuser
@@ -2905,6 +2908,7 @@ taobao
 tapas
 target
 tarom
+tarteaucitron
 task
 tasmota
 tata
