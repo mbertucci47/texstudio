@@ -2391,6 +2391,7 @@
 <file>completion/magicwatermark.cwl</file>
 <file>completion/Magra.cwl</file>
 <file>completion/mahjong.cwl</file>
+<file>completion/mahjong-tiles.cwl</file>
 <file>completion/mailing.cwl</file>
 <file>completion/mailmerge.cwl</file>
 <file>completion/makebarcode.cwl</file>
