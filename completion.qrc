@@ -1241,6 +1241,7 @@
 <file>completion/datatool-pgfmath.cwl</file>
 <file>completion/datax.cwl</file>
 <file>completion/dateiliste.cwl</file>
+<file>completion/datemultical.cwl</file>
 <file>completion/datenumber.cwl</file>
 <file>completion/datestamp.cwl</file>
 <file>completion/datetime2-calc.cwl</file>
