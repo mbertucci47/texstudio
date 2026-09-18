@@ -4098,6 +4098,7 @@
 <file>completion/tikzrput.cwl</file>
 <file>completion/tikzscale.cwl</file>
 <file>completion/tikzsymbols.cwl</file>
+<file>completion/tikz-tensor-networks.cwl</file>
 <file>completion/tikz-timing.cwl</file>
 <file>completion/tikz-trackschematic.cwl</file>
 <file>completion/tikz-triminos.cwl</file>
