@@ -2374,6 +2374,7 @@
 <file>completion/lua-regression.cwl</file>
 <file>completion/luaset.cwl</file>
 <file>completion/luasseq.cwl</file>
+<file>completion/luatagging.cwl</file>
 <file>completion/luatex85.cwl</file>
 <file>completion/luatexbase.cwl</file>
 <file>completion/luatex.cwl</file>
