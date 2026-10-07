@@ -123,6 +123,7 @@
 <file>completion/analogclock.cwl</file>
 <file>completion/andika.cwl</file>
 <file>completion/animate.cwl</file>
+<file>completion/animategif.cwl</file>
 <file>completion/annee-scolaire.cwl</file>
 <file>completion/annotate-equations.cwl</file>
 <file>completion/annot_pro.cwl</file>
@@ -2784,6 +2785,7 @@
 <file>completion/numprint.cwl</file>
 <file>completion/numspell.cwl</file>
 <file>completion/nunito.cwl</file>
+<file>completion/nycbullets.cwl</file>
 <file>completion/oands.cwl</file>
 <file>completion/obchaptertoc.cwl</file>
 <file>completion/oblivoir-misc.cwl</file>
@@ -3641,6 +3643,7 @@
 <file>completion/statistics.cwl</file>
 <file>completion/statmath.cwl</file>
 <file>completion/statrep.cwl</file>
+<file>completion/statusstamp.cwl</file>
 <file>completion/staves.cwl</file>
 <file>completion/stdclsdv.cwl</file>
 <file>completion/stdpage.cwl</file>
@@ -3798,6 +3801,7 @@
 <file>completion/tensorstyles.cwl</file>
 <file>completion/termcal.cwl</file>
 <file>completion/termes-otf.cwl</file>
+<file>completion/terminaltrees.cwl</file>
 <file>completion/termlist.cwl</file>
 <file>completion/termsim.cwl</file>
 <file>completion/testhyphens.cwl</file>
