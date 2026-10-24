@@ -1,4 +1,8 @@
 # CHANGELOG
+## TeXstudio 4.9.10
+
+- mask API key like password in config dialog  [#4708](https://github.com/texstudio-org/texstudio/issues/4708)
+
 ## TeXstudio 4.9.9
 
 - fix help/check latex installation
@@ -13,6 +17,7 @@
 - disable file explorer updates when not visible [#4700](https://github.com/texstudio-org/texstudio/issues/4700)
 - fix display of cached lines (typically disabled) [#4699](https://github.com/texstudio-org/texstudio/issues/4699)
 - make the zoom level of the pdf-viewer manually customizable [#4697](https://github.com/texstudio-org/texstudio/issues/4697)
+- fix a crash with qt/osx [#4706](https://github.com/texstudio-org/texstudio/issues/4706)
 
 ## TeXstudio 4.9.8
 
