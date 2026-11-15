@@ -116,3 +116,7 @@ aspectratio=#2013,1610,169,149,141,54,43,32,%<xxxx%>
 \blacktriangleright
 \blacktriangleleft
 \redefbeamertemplate{element}{option}#*
+
+#keyvals:\framezoom
+rtl#true,false
+#endkeyvals

@@ -1,5 +1,5 @@
 # subcaptionlite package
-# Matthew Bertucci 2026/10/29 for v1.0
+# Matthew Bertucci 2026/11/15 for v1.1
 
 #include:etoolbox
 
@@ -10,6 +10,7 @@
 \begin{subtable}[pos]{width}
 \end{subtable}
 
+\ContinuedFloat
 \subcaption{text}
 \subcaption*{text}
 \subcaptionbox{text}{contents%text}

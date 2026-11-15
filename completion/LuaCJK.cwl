@@ -1,5 +1,5 @@
 # LuaCJK package
-# Matthew Bertucci 2026/11/12 for v0.0.1
+# Matthew Bertucci 2026/11/15 for v0.0.2
 
 #include:luatex
 #include:fontspec
@@ -8,8 +8,10 @@
 \addCJKfontfeatures{font features%keyvals}
 \CJKfamilydefault#*
 \CJKfamily{family}
-\CJKfontspec[font features%keyvals]{font}
+\CJKfontspec[font features%keyvals]{font}#*
+\CJKfontspec[font features%keyvals]{font}[font features%keyvals]#S
 \CJKfontspec{font}
+\CJKfontspec{font}[font features%keyvals]
 \CJKrmdefault#*
 \CJKsfdefault#*
 \CJKttdefault#*
@@ -37,10 +39,14 @@
 \LuaCJKShipoutHook{code}
 \LuaCJKVerbAddon
 \LuaCJKversion#*
-\newCJKfontfamily[family]{command}[font features%keyvals]{font}#d
+\newCJKfontfamily[family]{command}[font features%keyvals]{font}#*d
+\newCJKfontfamily[family]{command}[font features%keyvals]{font}[font features%keyvals]#Sd
 \newCJKfontfamily[family]{command}{font}#d
-\newCJKfontfamily{command}[font features%keyvals]{font}#d
+\newCJKfontfamily[family]{command}{font}[font features%keyvals]#d
+\newCJKfontfamily{command}[font features%keyvals]{font}#*d
+\newCJKfontfamily{command}[font features%keyvals]{font}[font features%keyvals]#Sd
 \newCJKfontfamily{command}{font}#d
+\newCJKfontfamily{command}{font}[font features%keyvals]#d
 \normalspacedchars{char list}
 \setCJKfallbackfamilyfont{family}[font features%keyvals]{font}#*
 \setCJKfallbackfamilyfont{family}[font features%keyvals]{font}[font features%keyvals]#S

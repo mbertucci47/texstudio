@@ -3807,6 +3807,7 @@
 <file>completion/TangramTikz.cwl</file>
 <file>completion/tascmac.cwl</file>
 <file>completion/tasks.cwl</file>
+<file>completion/tblnotes.cwl</file>
 <file>completion/tcbpagefootnote.cwl</file>
 <file>completion/tcolorbox.cwl</file>
 <file>completion/tcolorboxlibraryall.cwl</file>

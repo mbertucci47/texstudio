@@ -1,5 +1,5 @@
 # babelbidi package
-# Matthew Bertucci 2026/11/12 for v1.0.0
+# Matthew Bertucci 2026/11/15 for v1.1.0
 
 #include:iftex
 #include:xkeyval
@@ -71,6 +71,7 @@ rtl=%<language%>
 \begin{latinverbatim*}#V
 \begin{latinverbatim}#V
 \begin{latin}
+\begin{latinitems}
 \begin{LTRbibitems}
 \begin{LTRitems}
 \begin{LTR}
@@ -81,6 +82,7 @@ rtl=%<language%>
 \end{latinverbatim*}
 \end{latinverbatim}
 \end{latin}
+\end{latinitems}
 \end{LTRbibitems}
 \end{LTRitems}
 \end{LTR}
@@ -150,8 +152,10 @@ rtl=%<language%>
 \twocolumnstableofcontents
 \unsetfootnoteLR
 \unsetfootnoteRL
-\unsetLTR#*
-\unsetRTL#*
+\unsetLR#*
+\unsetLTR
+\unsetRL#*
+\unsetRTL
 \vboxL#*
 \vboxR#*
 \vtopL#*
