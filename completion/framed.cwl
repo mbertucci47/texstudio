@@ -15,8 +15,8 @@
 \end{snugshade*}
 \begin{leftbar}
 \end{leftbar}
-\begin{titled-frame}#*
-\end{titled-frame}#*
+\begin{titled-frame}{title%text}
+\end{titled-frame}
 
 \MakeFramed{settings}#*
 \endMakeFramed#*
@@ -31,4 +31,5 @@
 \OuterFrameSep#*
 \CustomFBox{after-top}{above-bottom}{trulewidth}{brulewidth}{lrulewidth}{rrulewidth}#*
 \OpenFBox{trulewidth}{brulewidth}#*
-\TitleBarFrame[marker]{title}{contents}#*
+\TitleBarFrame{title%text}{contents%text}#*
+\TitleBarFrame[marker]{title%text}{contents%text}#*
