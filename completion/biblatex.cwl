@@ -7204,7 +7204,7 @@ introcite=#false,plain,label
 \mkonepagegrouped{text}#*
 #endif
 
-### biblatex-iso690 v0.4.2 ###
+### biblatex-iso690 v0.4.3 ###
 #ifOption:style=iso-alphabetic
 # loads iso.bbx
 #keyvals:\usepackage/biblatex#c,\ExecuteBibliographyOptions#c
@@ -7220,7 +7220,7 @@ familynamesc#true,false
 givennamesfirst#true,false
 #endkeyvals
 # from iso.bbx
-#include:regexpatch
+#include:xpatch
 \stdidentifierspunct#*
 \dateaddonpunct#*
 \numerationpunct#*
