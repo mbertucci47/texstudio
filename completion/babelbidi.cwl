@@ -1,5 +1,5 @@
 # babelbidi package
-# Matthew Bertucci 2026/11/15 for v1.1.0
+# Matthew Bertucci 2026/11/17 for v1.2.0
 
 #include:iftex
 #include:xkeyval
@@ -8,6 +8,8 @@
 #include:babelbidi-logos
 
 #keyvals:\usepackage/babelbidi#c
+arabmaths
+autofootnoterule
 bidi=#basic,bidi-r,default
 code=%<language%>
 extrafootnotefeatures
@@ -17,6 +19,7 @@ layout=%<selectors%>
 logostyle=#auto,simple
 ltr=%<language%>
 rtl=%<language%>
+textwidthfootnoterule
 #endkeyvals
 
 #ifOption:extrafootnotefeatures
@@ -71,30 +74,39 @@ rtl=%<language%>
 \begin{latinverbatim*}#V
 \begin{latinverbatim}#V
 \begin{latin}
+\begin{latin*}
 \begin{latinitems}
 \begin{LTRbibitems}
 \begin{LTRitems}
 \begin{LTR}
+\begin{LTR*}
 \begin{RTLbibitems}
 \begin{RTLcases}#\tabular
 \begin{RTLitems}
 \begin{RTL}
+\begin{RTL*}
 \end{latinverbatim*}
 \end{latinverbatim}
 \end{latin}
+\end{latin*}
 \end{latinitems}
 \end{LTRbibitems}
 \end{LTRitems}
 \end{LTR}
+\end{LTR*}
 \end{RTLbibitems}
 \end{RTLcases}
 \end{RTLitems}
 \end{RTL}
+\end{RTL*}
 
 \autofootnoterule
 \bidillap{text}
 \bidirlap{text}
 \debugfootnotedirection
+\eqcommand{alias}{original}
+\eqenvironment{envname}{original}#N
+\EqEnvironment{envname}{original}#N
 \fontfallback{language}{list of languages}
 \footnoterulewidth#L
 \hboxL#*
@@ -121,6 +133,7 @@ rtl=%<language%>
 \LTRmarginpar[left text%text]{right text%text}
 \LTRmarginpar{right text%text}
 \LTRthanks{text}
+\makezwnjletter
 \rightfootnoterule
 \RLE{text}
 \RLfootnoterule
@@ -146,9 +159,12 @@ rtl=%<language%>
 \setRL#*
 \setRTL
 \setRTLbibitems
+\setRTLmain
 \setRTLmarginpar
 \SplitFootnoteRule
 \textwidthfootnoterule
+\TeXXeTOff#*
+\TeXXeTOn#*
 \twocolumnstableofcontents
 \unsetfootnoteLR
 \unsetfootnoteRL
