@@ -1,6 +1,6 @@
 # allrunes package
 # tbraun, 28.08.2008
-# Matthew Bertucci 8/6/2021
+# Matthew Bertucci 2026/11/13
 
 #include:ifthen
 
@@ -131,19 +131,19 @@
 \turn{rune}
 
 # not documented
-\DeclareFontShapeWithSizes{encoding}{family}{series}{shape}{loading-info}#*
-\lfdefault#*
-\bldefault#*
-\mldefault#*
-\lldefault#*
-\stdefault#*
-\rodefault#*
-\cwdefault#*
-\rwdefault#*
-\DeclareRuneSeparators{encoding}#*
-\artdefault#*
-\arndefault#*
-\armdefault#*
-\arldefault#*
-\arcdefault#*
 \aradefault#*
+\arcdefault#*
+\arldefault#*
+\armdefault#*
+\arndefault#*
+\artdefault#*
+\bldefault#*
+\DeclareFontShapeWithSizes{encoding}{family}{series}{shape}{loading-info}#*
+\DeclareRuneSeparators{encoding}#*
+\lfdefault#*
+\lldefault#*
+\mldefault#*
+\rodefault#*
+\rolowdefault#*
+\stlowdefault#*
+\uplowdefault#*

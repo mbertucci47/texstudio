@@ -4026,6 +4026,7 @@
 <file>completion/tikzlibraryfill.rhombus.cwl</file>
 <file>completion/tikzlibraryfit.cwl</file>
 <file>completion/tikzlibraryfixedpointarithmetic.cwl</file>
+<file>completion/tikzlibraryflorilegium.cwl</file>
 <file>completion/tikzlibraryfolding.cwl</file>
 <file>completion/tikzlibraryfpu.cwl</file>
 <file>completion/tikzlibrarygraphdrawing.cwl</file>

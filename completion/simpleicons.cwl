@@ -1,5 +1,5 @@
 # simpleicons package
-# Matthew Bertucci 2026/10/30 for v16.36.0
+# Matthew Bertucci 2026/11/13 for v16.37.0
 
 #include:iftex
 
@@ -1997,6 +1997,7 @@ netlify
 nette
 netto
 neutralinojs
+newapi
 newbalance
 newegg
 newgrounds
@@ -2077,6 +2078,7 @@ obsidian
 obsstudio
 obtainium
 ocaml
+oceanbase
 oclc
 oclif
 octanerender
@@ -3459,6 +3461,7 @@ zigbee
 zigbee2mqtt
 ziggo
 zilch
+zilliz
 zillow
 zingat
 zod
