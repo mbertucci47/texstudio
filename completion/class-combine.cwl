@@ -66,7 +66,7 @@ colclass=%<class name%>
 \bodytitle[short title]{long title}
 \bodytitlemark{text}#*
 \coltoctitle{title%text}
-\coltoctitle{author}
+\coltocauthor{author}
 \published{long%text}
 \published[short]{long%text}
 
