@@ -1,5 +1,5 @@
 # florilegium package
-# Matthew Bertucci 2026/11/11 for v2.0.1
+# Matthew Bertucci 2026/11/19 for v2.1.0
 
 #include:luatex
 #include:tikz
@@ -9,11 +9,13 @@
 aging
 authored
 grown
+headpieces
 intensity=%<factor%>
 nomargin
+noshells
 novisitors
 sections
-theme=#geometric,math
+theme=#geometric,math,shells
 #endkeyvals
 
 \florilegiumage{factor}
@@ -22,13 +24,20 @@ theme=#geometric,math
 \florilegiumdraw{type}{number}
 \florilegiumframe[opt]{k}{n}
 \florilegiumframe{k}{n}
+\florilegiumheadpiece
+\florilegiumheadpiece[options%keyvals]
+\florilegiumhide
+\florilegiumhide[pages]
 \florilegiuminitial[lines]{letter}
 \florilegiuminitialfont{font file%file}
+\florilegiuminitialframe{type}
 \florilegiuminitial{letter}
+\florilegiumoff
+\florilegiumon
 \florilegiumornament{type}
 \florilegiumseed#*
 \florilegiumtextend
 \florilegiumtheme{theme}
 
-ink#B
 accent#B
+ink#B
