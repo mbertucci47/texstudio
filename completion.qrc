@@ -4427,6 +4427,7 @@
 <file>completion/wordlike.cwl</file>
 <file>completion/worksheet.cwl</file>
 <file>completion/worldflags.cwl</file>
+<file>completion/wrapblock.cwl</file>
 <file>completion/wrapfig2.cwl</file>
 <file>completion/wrapfig.cwl</file>
 <file>completion/wrapstuff.cwl</file>
