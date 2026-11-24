@@ -304,6 +304,7 @@
 \NewTaggingSocketPlug{socket}{socket plug}{code}#*
 \NewTemplateType{template type}{no. of args}#*
 \NextLinkTarget{target name}#*
+\NoValue#*
 \OmitIndent#*
 \OptionNotUsed#*
 \PackageError{package name}{error text%text}{help text%text}#*
